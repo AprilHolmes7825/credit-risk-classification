@@ -11,27 +11,37 @@ In this section, describe the analysis you completed for the machine learning mo
     
 * The model was trained to predict loan status (Healthy/High risk of defaulting).
 
-* Describe the stages of the machine learning process you went through as part of this analysis.
+* Stages of the machine learning process
 ................
+PREPROCESS
 Separate the data into labels and features
 Split the data into training and testing datasets by using `train_test_split`
+TRAIN
 Create a Logistic Regression Model with the Original Data
+VALIDATE
 Step 1: Fit a logistic regression model by using the training data
-Step 2: Make a prediction using the testing data....Save the predictions on the testing data labels by using the testing feature data (`X_test`) and the fitted model.
+PREDICT
+Step 2: Make a prediction using the testing data
+
 Step 3: Evaluate the model’s performance by doing the following:
     Generate a confusion matrix.
     Print the classification report.
 
-* Briefly touch on any methods you used (e.g., `LogisticRegression`, or any other algorithms).
-?What is logistic regression?
-Logistic regression is a statistical method for predicting binary outcomes from data.
+* Methods used: Logistic regression - a statistical method for predicting binary outcomes from data.
 
 ## Results
 
 Using bulleted lists, describe the accuracy scores and the precision and recall scores of all machine learning models.
 
 * Machine Learning Model 1:
-    * Description of Model 1 Accuracy (99%), Precision, and Recall scores.
+    * Description of Model 1 Accuracy (99%), Precision (100% for healthy loans, 87% for high risk loans), and Recall scores (100% for healthy loans, 89% for high risk loans).
+
+                        precision    recall  f1-score   support
+
+  Healthy Loan (0)       1.00      1.00      1.00     18759
+High-Risk Loan (1)       0.87      0.89      0.88       625
+          accuracy                           0.99     19384
+
 
 ## Summary
 
@@ -42,4 +52,3 @@ For example:
 * Which one seems to perform best? How do you know it performs best?
 * Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
 
-If you do not recommend any of the models, please justify your reasoning.
